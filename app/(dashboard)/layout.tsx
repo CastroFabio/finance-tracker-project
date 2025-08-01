@@ -1,7 +1,14 @@
-const DashboardLayout = () => {
+import { Header } from "@/components/Header";
+
+type Props = {
+  children: React.ReactNode;
+};
+
+const DashboardLayout = ({ children }: Props) => {
   return (
     <>
-      <div className="flex flex-col h-screen">Layout</div>;
+      <Header />
+      <main className="px-3 lg:px-14">{children}</main>
     </>
   );
 };

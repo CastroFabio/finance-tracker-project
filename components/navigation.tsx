@@ -49,6 +49,7 @@ export function Navigation() {
                 variant={href === pathname ? "secondary" : "ghost"}
                 key={href}
                 onClick={() => onClick(href)}
+                className="w-full justify-start"
               >
                 {label}
               </Button>

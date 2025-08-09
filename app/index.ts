@@ -1,16 +1,16 @@
 import "dotenv/config";
 import { drizzle } from "drizzle-orm/neon-http";
 import { eq } from "drizzle-orm";
-import { accounts } from "./db/schema";
+import { accounts } from "../db/schema";
 
 const db = drizzle(process.env.DATABASE_URL!);
 
 async function main() {
   const accounts2: typeof accounts.$inferInsert = {
-    id: "12ewqe13",
+    id: "12ewqe132",
     plaidId: "plaid_123456789",
-    name: "John",
-    email: "john@example.com",
+    name: "John2",
+    email: "john2@example.com",
   };
 
   await db.insert(accounts).values(accounts2);
